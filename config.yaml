@@ -1,0 +1,60 @@
+baseURL: https://eternity.bora.sh # todo: change site url.
+title: Pandenko
+defaultContentLanguage: "en"
+googleAnalytics: "G-MEASUREMENT_ID" # todo: set your analytics id.
+
+params:
+  image: /images/banner.png
+  logo: logo.png # todo: add your custom logo to static/
+  subtitle: Art Portfolio
+  copyright: All rights reserved. # todo: set your copyright type.
+  author: Valentin Pandenko
+  dontShowSource: false # please, do not do this :)
+  portfolio:
+    columns:
+      desktop:
+        default: 4
+      mobile:
+        default: 2
+  socials:
+    - icon: "fab fa-instagram fa-lg"
+      url: "https://www.instagram.com/valentin_pandenko/"
+      landing: true
+    - icon: "fab fa-youtube fa-lg"
+      url: "https://www.youtube.com/@pandenko"
+      landing: true
+    - icon: "fab fa-github fa-lg"
+      url: "https://github.com/tumypmyp"
+      landing: true
+  homepage: "/" # homepage link, mostly same with menu.main[0]
+  specialPages:
+    - work
+    - archive
+  bypassWelcomePage: true # redirects "/" to "homepage" when it's true.
+  disableWelcomePageBackground: true # disables the background image on the homepage
+  plausible: "" # todo: set your plausible id.
+  disableRadius: false
+  moveIt: false # Moves Title and Meta info down, only visible when scroll.
+  disableAlwaysResize: false
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: true
+
+taxonomies:
+  work: works
+  tag: tags
+
+permalinks:
+  work: ":filename/"
+
+menu:
+  main:
+    - name: me
+      url: /
+      weight: 1
+    - name: work
+      url: /work
+      weight: 2
