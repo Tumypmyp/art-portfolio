@@ -3,6 +3,14 @@ title: Pandenko
 defaultContentLanguage: "en"
 googleAnalytics: "G-MEASUREMENT_ID" # todo: set your analytics id.
 
+module:
+  hugoVersion:
+    extended: true
+    min: "0.125.0"
+  workspace: hugo.work
+  imports:
+    path: github.com/tumypmyp/art-portfolio
+
 params:
   image: /images/banner.png
   logo: logo.png # todo: add your custom logo to static/
